@@ -15,10 +15,22 @@
     "yarn": "~0.24.3"
   },
   "scripts": {
-    "start": "PORT=3000 node ./bin/www",
+    "start": "PORT=3001 node ./bin/www",
+    "test": "jest --config ./jestBackend.config.js",
     "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
+  "jest": {
+    "verbose": true,
+    "automock": false,
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": [
+      "/client/"
+    ]
+  },
   "dependencies": {
+    "algoliasearch": "^3.24.0",
+    "babel-jest": "^20.0.3",
+    "babel-preset-stage-0": "^6.24.1",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
@@ -26,5 +38,11 @@
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.4",
+    "superagent": "^3.5.2",
+    "supertest": "^3.0.0"
   }
 }
