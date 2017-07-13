@@ -1,9 +1,9 @@
 # AppStore Algolia powered :mag:
-> AppStore, with my _**Algolia**_ instant-search version
+> AppStore, with my _**Algolia**_ instant-search tiny version
 
 ## Prerequisites
 
-- NodeJS, Npm, Yarn (see [package.json](./package.json#L12) file for versions)
+- NodeJs, Npm, Yarn (see [package.json](./package.json#L12) file for versions)
 
 ### Install back & front
 
@@ -11,37 +11,47 @@
     $ cd client/
     $ yarn
 
-### Start server
+### Start server in development mode
 
-Make sur you are in the project root:
+Make sur you are in the project root and run:
 
-    $ yarn start
+    $ yarn start:dev
 
-### Start client
+### Start client in development mode
 
-Open a different terminal than where the server runs:
+Open a new terminal session and run:
 
     $ cd client/
+    $ yarn start:dev
+
+### Build client
+
+    $ cd client/
+    $ yarn build
+
+### Start application
+
+At the project root:
+
     $ yarn start
 
 ### Test backend
 
-In project root folder:
+In project root folder, run:
 
     $ yarn test
 
-### Test frontend
+### Test frontend (almost nothing for now...)
 
     $ cd client/
     $ yarn test
-    
+
 
 ### Technologies from :heart: OSS projects
 
-- Algolia instant-search
+- Algoliasearch
+- Algoliasearch-Helper
 - React
-- Redux
-- React Router
 - Express
 - Express-Generator
 - Styled-Components
@@ -50,6 +60,22 @@ In project root folder:
 - Create-React-App
 ...
 
+
+### Features
+
+- Search
+- Results
+- Highlight
+- Rate with half-star
+- Category filtering
+- Ranking switching
+- Pagination
+
 ### Evolutions & improvements
 
+- Add tests to the frontend
+- Warn if user is offline
+- Use HOC to provide helper to components (ResultList and CategoryList, for ex.)
+- Enable ServiceWorker to use cache (for images mostly)
+- Change offset by page
 ...

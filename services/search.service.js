@@ -24,8 +24,7 @@ module.exports = {
       .then(res => res)
       .catch(err => {
         console.error(err);
-        // return new Error(err);
-        // throw new Error(err);
+        throw new Error(err);
       });
   },
   deleteApp: (appId) => {
@@ -33,8 +32,7 @@ module.exports = {
       .then(res => res)
       .catch(err => {
         console.error(err);
-        // return new Error(err);
-        // throw new Error(err);
+        throw new Error(err);
       });
   }
 };

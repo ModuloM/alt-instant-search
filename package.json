@@ -2,6 +2,7 @@
   "name": "alt-instant-search",
   "version": "0.1.0",
   "description": "Algolia instant-search implementation.",
+  "homepage": "https://morning-fjord-81002.herokuapp.com/",
   "private": true,
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
     "yarn": "~0.24.3"
   },
   "scripts": {
-    "start": "PORT=3001 node ./bin/www",
+    "start": "node ./bin/www",
+    "start:dev": "PORT=3001 node ./bin/www",
     "test": "jest --config ./jestBackend.config.js",
     "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
@@ -37,6 +39,7 @@
     "express": "~4.15.2",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
+    "prop-types": "^15.5.10",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
