@@ -11,13 +11,13 @@ import {
 const CategoryElement = styled.div`
   display: flex;
   flex: 0 1 25%;
-  cursor: pointer;
   ${media.tablet`flex: 0 1 33%;`}
   ${media.phone`flex: 0 1 50%;`}
   padding-bottom: .5rem;
 `;
 
 const CategoryName = styled.div`
+  cursor: pointer;
   font-style: italic;
   font-weight: ${props => props.isRefined ? 600 : 100};
   border-radius: 1rem;
@@ -43,11 +43,10 @@ const CategoryItem = ({
   onSelected,
   bidule
 }) => (
-  <CategoryElement
-    onClick={ () => onSelected(name) }
-  >
+  <CategoryElement>
     <CategoryName
       isRefined={ isRefined }
+      onClick={ () => onSelected(name) }
     >
       { name }
     </CategoryName>
